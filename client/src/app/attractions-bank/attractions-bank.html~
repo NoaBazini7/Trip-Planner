@@ -1,0 +1,59 @@
+
+<mat-card class="attractions-bank-container">
+  <div class="attractions-bank-header">
+    <h2>Attractions Bank</h2>
+  </div>
+  <div class = "attractions-bank-columns-container">
+    <div class ="attractions-bank-columns" *ngFor="let category of getCategories()">
+      <h6>{{ category }}</h6>
+      <div class="attractions-bank-chips-container"
+      cdkDropList
+      id="attractionsBank"
+      [cdkDropListData]="getAttractionsByCategory(category)"
+      [cdkDropListConnectedTo]="getConnectedDropLists()">
+        <mat-chip
+          class="attractions-bank-chip"
+          [ngClass]="['category-' + category.toLowerCase(),
+            draggingAttractionName === attraction.name ? 'drag-hidden': '']"
+          *ngFor="let attraction of getAttractionsByCategory(category)"
+          cdkDrag
+          [cdkDragData]="attraction"
+          (cdkDragStarted)="onDragStarted($event)"
+          (cdkDragEnded)="onDragEnded($event)">
+          <ng-template cdkDragPlaceholder>
+          </ng-template>
+          <ng-template cdkDragPreview>
+            <div class="drag-preview-chip category-{{ category.toLowerCase() }}"
+                 [ngStyle]="previewStyle">
+              <img
+                [src]="'../../assets/attractions-icons/' + category.toLowerCase() + '.svg'"
+                alt=""
+                class="attraction-image"
+              />
+              <h6 class="drag-preview-name">{{ attraction.name }}</h6>
+            </div>
+          </ng-template>
+
+          <img
+          [src]="'../../assets/attractions-icons/' + category.toLowerCase() + '.svg'"
+          alt=""
+          class="attraction-image"
+        />
+        <div class="attraction-info">
+          <h6>{{ attraction.name }}</h6>
+          <div class="attraction-description-wrapper">
+            <p class="attraction-description">{{ attraction.description }}</p>
+          </div>
+        </div>
+        <div class ="attraction-category-card-container"
+        >
+          <mat-card class="attraction-card">
+            {{attraction.category}}
+          </mat-card>
+        </div>
+
+        </mat-chip>
+      </div>
+    </div>
+  </div>
+</mat-card>

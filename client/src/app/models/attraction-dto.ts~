@@ -1,0 +1,10 @@
+export interface AiAttractionDto {
+  name: string;
+  description: string;
+  category: string;
+  estimatedTime: number;
+  latitude: number;
+  longtitude: number;
+  popularity: number;
+  openingHours: string;
+}

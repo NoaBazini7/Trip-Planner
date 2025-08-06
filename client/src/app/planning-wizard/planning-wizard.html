@@ -1,0 +1,189 @@
+<div class ="background-image">
+  <div class="wizard-container">
+    <button mat-button class="where-button">
+      <p>Where?</p>
+    </button>
+
+    <div class="wizard-step-when" ng-class="{active: currentStep === 1}">
+      <!--    <mat-card class="when-title-container">-->
+      <!--        <h2 class="when-title">When?</h2>-->
+      <!--    </mat-card>-->
+      <!--    <mat-card class="when-content-card">-->
+      <!--        <div class="when-content">-->
+      <!--            <div class="arrival">-->
+      <!--              <div class="arrival-input">-->
+      <!--                <h1 class="arrival-hour">{{ arrivalHour }}</h1>-->
+      <!--                <h1 class="time-seperator">:</h1>-->
+      <!--                <h1 class="arrival-minute">{{arrivalMinute}}</h1>-->
+      <!--              </div>-->
+      <!--              <app-draggable-clock [type]="'arrival'" (timeChange)="onTimeSelected($event)" class="clock"/>-->
+      <!--              <h1 class="arrival-text">Arrival</h1>-->
+      <!--            </div>-->
+
+      <!--            <mat-calendar-->
+      <!--            [selected]="selectedRangeValue"-->
+      <!--            (selectedChange)="selectedChange($event)">-->
+
+      <!--            </mat-calendar>-->
+
+      <!--            <div class="leave">-->
+      <!--            <div class="leave-input">-->
+      <!--              <h1 class="leave-hour">{{ leaveHour }}</h1>-->
+      <!--              <h1 class="time-seperator">:</h1>-->
+      <!--              <h1 class="leave-minute">{{leaveMinute}}</h1>-->
+      <!--            </div>-->
+
+      <!--            <app-draggable-clock [type]= "'leave'" (timeChange)="onTimeSelected($event)" class="clock"/>-->
+      <!--            <h1 class="leave-text">Leave</h1>-->
+      <!--            </div>-->
+
+      <!--      </div>-->
+      <!--    </mat-card>-->
+
+    </div>
+    <div class="wizard-step-where" ng-class="{active: currentStep === 2}">
+      <!--    <mat-card class="where-title-container">-->
+      <!--        <h2 class="where-title">Where?</h2>-->
+      <!--    </mat-card>-->
+      <!--    <mat-card class="where-content-card">-->
+      <!--      <div class="where-content">-->
+      <!--        <div class="country-selection-container">-->
+      <!--          <mat-card class="country-selection-background">-->
+      <!--          <mat-card class="country-selection">-->
+      <!--            <div *ngIf="countries.length > 0; else loading" class="country-list">-->
+      <!--              <div class="country-selection-header">-->
+      <!--                <h3>Select a Country:</h3>-->
+      <!--              </div>-->
+      <!--              <div class="country-buttons-container">-->
+      <!--                <button mat-raised-button class="country-list-button" *ngFor="let country of countries" (click)="onCountrySelect(country) " [ngClass]="{ selected: country === selectedCountry }">-->
+      <!--                {{ country.name }}-->
+      <!--                </button>-->
+      <!--              </div>-->
+      <!--            </div>-->
+      <!--            <ng-template #loading>-->
+      <!--              <p>Loading countries...</p>-->
+      <!--            </ng-template>-->
+
+      <!--            &lt;!&ndash; Country Preview Images &ndash;&gt;-->
+      <!--            <div *ngIf="selectedCountry" class="country-preview">-->
+      <!--              <div class="image-grid">-->
+      <!--                <ngb-carousel>-->
+      <!--                  <ng-template ngbSlide>-->
+      <!--                    <div class="country-image-wrapper">-->
+      <!--                      <img src="assets/pic.png" alt="Random first slide" class="country-image" />-->
+      <!--                    </div>-->
+      <!--                  </ng-template>-->
+      <!--                  <ng-template ngbSlide>-->
+      <!--                    <div class="country-image-wrapper">-->
+      <!--                      <img src="assets/pic.png" alt="Random second slide" class="country-image" />-->
+      <!--                    </div>-->
+      <!--                  </ng-template>-->
+      <!--                  <ng-template ngbSlide>-->
+      <!--                    <div class="country-image-wrapper">-->
+      <!--                      <img src="assets/pic.png" alt="Random third slide" class="country-image" />-->
+      <!--                    </div>-->
+      <!--                  </ng-template>-->
+      <!--                </ngb-carousel>-->
+      <!--              </div>-->
+      <!--            </div>-->
+      <!--          </mat-card>-->
+      <!--        </mat-card>-->
+      <!--        </div>-->
+
+
+      <!--        <div class="city-selection-container">-->
+      <!--          &lt;!&ndash; City Selection &ndash;&gt;-->
+      <!--          <mat-card class="city-selection-background">-->
+
+      <!--            &lt;!&ndash; Cities of that country &ndash;&gt;-->
+      <!--            <mat-card class="city-selection">-->
+
+
+      <!--                  <div class="city-preview">-->
+      <!--                  <div class="image-grid">-->
+      <!--                    <ngb-carousel>-->
+      <!--                      <ng-template ngbSlide>-->
+      <!--                        <div class="city-image-wrapper">-->
+      <!--                          <img src="assets/pic.png" alt="Random first slide" class="city-image" />-->
+      <!--                        </div>-->
+      <!--                      </ng-template>-->
+      <!--                      <ng-template ngbSlide>-->
+      <!--                        <div class="city-image-wrapper">-->
+      <!--                          <img src="assets/pic.png" alt="Random second slide" class="city-image" />-->
+      <!--                        </div>-->
+      <!--                      </ng-template>-->
+      <!--                      <ng-template ngbSlide>-->
+      <!--                        <div class="city-image-wrapper">-->
+      <!--                          <img src="assets/pic.png" alt="Random third slide" class="city-image" />-->
+      <!--                        </div>-->
+      <!--                      </ng-template>-->
+      <!--                    </ngb-carousel>-->
+      <!--                  </div>-->
+      <!--                </div>-->
+      <!--                <div class="city-list" *ngIf="cities.length > 0">-->
+      <!--                <div class="city-selection-header">-->
+      <!--                  <h3>Select a City:</h3>-->
+      <!--                </div>-->
+      <!--                <div class="city-buttons-container">-->
+      <!--                  &lt;!&ndash; City List &ndash;&gt;-->
+      <!--                  <button mat-raised-button class="city-list-button" *ngFor="let city of cities" (click)="onCitySelect(city)" [ngClass]="{ selected: city === selectedCity }">-->
+      <!--                    {{ city.name }}-->
+      <!--                  </button>-->
+      <!--                </div>-->
+
+      <!--              </div>-->
+      <!--            </mat-card>-->
+      <!--          </mat-card>-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <!--  </mat-card>-->
+    </div>
+    <div class="wizard-step-how" ng-class="{active: currentStep === 3}">
+      <!--    <mat-card class="how-title-container">-->
+      <!--        <h2 class="how-title">How?</h2>-->
+      <!--    </mat-card>-->
+      <!--    <mat-card class="how-content-card">-->
+      <!--      <div class="how-content">-->
+      <!--        <div class="day-start-end-slider">-->
+      <!--          <ngx-slider-->
+      <!--          [(value)]="dayStart"-->
+      <!--          [(highValue)]="dayEnd"-->
+      <!--          [options]="dayStartEndOptions">-->
+      <!--          </ngx-slider>-->
+      <!--          <div class="day-start-end-labels">-->
+      <!--            <p>Day Start</p>-->
+      <!--            <p>Day End</p>-->
+      <!--            </div>-->
+
+      <!--          </div>-->
+      <!--        <div class= "eating-habits">-->
+      <!--          <h3>How do you want to eat today?</h3>-->
+
+      <!--          <mat-button-toggle-group-->
+      <!--            [(ngModel)]="eatingStyle"-->
+      <!--            appearance="legacy"-->
+      <!--            name="eating-style"-->
+      <!--            class="eating-toggle"-->
+      <!--          >-->
+      <!--            <mat-button-toggle value="fast">-->
+      <!--              🚗 Fast Eater<br/><small>Eat on the go</small>-->
+      <!--            </mat-button-toggle>-->
+      <!--            <mat-button-toggle value="normal">-->
+      <!--              🍽️ Normal<br/><small>1 hour per meal</small>-->
+      <!--            </mat-button-toggle>-->
+      <!--            <mat-button-toggle value="relaxed">-->
+      <!--              🧘 Relaxed Diner<br/><small>2 hours per meal</small>-->
+      <!--            </mat-button-toggle>-->
+      <!--          </mat-button-toggle-group>-->
+
+      <!--        </div>-->
+      <!--      </div>-->
+
+      <!--    </mat-card>-->
+
+      <!--    <Button (click)="onClickNext()"> Next</Button>-->
+
+    </div>
+  </div>
+
+</div>

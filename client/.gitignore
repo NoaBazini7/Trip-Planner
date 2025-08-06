@@ -1,0 +1,23 @@
+# Angular build and dependencies
+/dist
+/node_modules
+/.angular
+/.vscode
+/.env
+.env.local
+.env.*.local
+
+# IDE/editor files
+*.log
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+
+# VS Code settings
+.vscode/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini

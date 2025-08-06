@@ -1,0 +1,48 @@
+.app-header {
+  background-color: transparent; /* Transparent background */
+  color: white; /* Default text color */
+  display: flex;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  position: absolute; /* Position it over the hero image */
+  width: 100%;
+  z-index: 10; /* Ensure it appears above the hero image */
+}
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 40px; /* Adjust logo size */
+}
+
+
+.app-header-button-group {
+  display: flex;
+  gap: var(--space-sm); /* Space between buttons */
+  margin-left: auto; /* Push buttons to the right */
+}
+
+.app-header-button-group button {
+  background-color: transparent; /* Transparent buttons */
+  color: var(--color-surface); /* White text */
+  border: none;
+  font-size: var(--font-size-base);
+  font-family: var(--font-title);
+  padding: var(--space-xs) var(--space-sm);
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.app-header-button-group button:hover {
+  background-color: var(--color-surface); /* White background on hover */
+  color: var(--color-primary); /* Dark font on hover */
+}
+
+.user-icon {
+  color: var(--color-surface)
+}
+
+

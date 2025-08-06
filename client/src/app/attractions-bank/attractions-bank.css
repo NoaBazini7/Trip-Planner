@@ -1,0 +1,188 @@
+.attractions-bank-header {
+  margin-bottom: 40px;
+  margin-top : 20px;
+  align-self: center;
+}
+
+.attractions-bank-columns-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.attractions-bank-columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+.attractions-bank-chips-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+.attractions-bank-chip {
+  width: 120px;
+  height: fit-content;
+  z-index: 1;
+  padding-top : 10px;
+}
+
+
+
+ .category-museum {
+  background-color: #f0f0f5 !important;
+}
+.category-landmark {
+  background-color: #fdf1f2 !important;
+}
+.category-nature{
+  background-color: #e9f3e4 !important;
+}
+.category-entertainment {
+  background-color: #ede7f6 !important;
+}
+.category-cultural {
+  background-color: #f8e6cc !important;
+}
+
+.attraction-info {
+  max-width: 130px;
+  margin-bottom:  40px;
+  z-index: 2; /* make sure text is above the image */
+  position: relative;
+  white-space: normal; /* Allow text to wrap */
+  word-break: break-word; /* Break long words if necessary */
+  word-wrap: break-word; /* Ensure compatibility with older browsers */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.attractions-bank-chip h6 {
+  font-size: 15px;
+  color: #cb7287;
+  text-align: center;
+  margin: 0;
+}
+.attraction-description {
+  font-size:10px;
+  text-align: center;
+  margin: 0;
+  word-break: break-word; /* Break long words if necessary */
+
+}
+
+
+.attraction-image {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  z-index: 1; /* ensure image is below text */
+  pointer-events: none; /* avoid hover/click interference */
+  transform-origin: bottom left; /* 👈 anchor the scaling */
+  height: 60px;
+  opacity: 0.5;
+
+}
+
+
+.attractions-bank-chip:hover .attraction-image {
+  transform: scale(2); /* 👈 shrink when not hovered */
+  opacity: 0.5;
+}
+
+
+.attraction-category-card-container {
+  position: absolute; /* Anchor to the bottom-right of the chip */
+  bottom: 10px;
+  right: 0px;
+  height: fit-content;
+
+  width: 90px;
+  z-index: 2; /* Ensure it appears above the image */
+  pointer-events: none; /* Avoid hover/click interference */
+}
+
+.attraction-card {
+  border-radius: 5px 0px 0px 5px;
+  margin-left: auto;
+  width: 100%;
+  background-color: #f8f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-color: #cb7287;
+  font-size: 12px;
+  box-shadow: none;
+}
+
+
+
+::ng-deep .cdk-drag-preview {
+  overflow: hidden !important;
+  position: absolute !important;
+  height: 5vh !important;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  white-space: normal;
+  word-break: break-word; /* Break long words if necessary */
+  width: 10vw !important;
+  border: 1px solid #cb7287 !important;
+
+}
+.drag-preview-name {
+  font-size: 15px;
+  color: #cb7287;
+
+}
+.attraction-image-preview {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  z-index: 1; /* ensure image is below text */
+  pointer-events: none; /* avoid hover/click interference */
+  height: 50px;
+}
+
+
+
+
+.attraction-description {
+  opacity: 0;
+  max-height: 0; /* Start with no height */
+  transition: opacity 0.3s ease;
+  font-size: 12px;
+  color: #444;
+}
+
+.attractions-bank-chip:hover .attraction-description {
+  opacity: 1;
+  max-height: 100px; /* or however tall you want it to grow */
+  margin-bottom: 35px;
+
+}
+
+.drag-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+

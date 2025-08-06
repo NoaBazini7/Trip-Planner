@@ -1,0 +1,18 @@
+<div class="attractions-bank-chip-simple-container">
+  <mat-chip class="attractions-bank-chip-simple" >
+    <img
+      [src]="'../../assets/attractions-icons/' + attraction.category.toLowerCase() + '.svg'"
+      alt="{{ attraction.name }}"
+      class="attraction-image-simple"
+    />
+    <div class="attraction-info-simple">
+      <h6>{{ attraction.name }}</h6>
+    </div>
+    <div class ="attraction-category-card-container-simple"
+    >
+      <mat-card class="attraction-card-simple">
+        {{attraction.category}}
+      </mat-card>
+    </div>
+  </mat-chip>
+</div>

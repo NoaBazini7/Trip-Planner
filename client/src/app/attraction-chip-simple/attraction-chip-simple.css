@@ -1,0 +1,53 @@
+.attractions-bank-chip-simple {
+  width: 120px;
+  height: 60px;
+  z-index: 1;
+  background-color: #f0f0f5 !important;
+}
+
+.attractions-bank-chip-simple h6 {
+  font-size: 15px;
+  color: #cb7287;
+  text-align: center;
+  margin: 0;
+}
+
+.attraction-image-simple {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  z-index: 1; /* ensure image is below text */
+  pointer-events: none; /* avoid hover/click interference */
+  transform-origin: bottom left; /* 👈 anchor the scaling */
+  height: 30px;
+  opacity: 0.5;
+
+}
+
+
+
+.attraction-category-card-container-simple {
+  position: absolute; /* Anchor to the bottom-right of the chip */
+  bottom: 10px;
+  right: 0px;
+  height: fit-content;
+
+  width: 90px;
+  z-index: 2; /* Ensure it appears above the image */
+  pointer-events: none; /* Avoid hover/click interference */
+}
+
+.attraction-card-simple {
+  border-radius: 5px 0px 0px 5px;
+  margin-left: auto;
+  width: 100%;
+  background-color: #f8f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-color: #cb7287;
+  font-size: 12px;
+  box-shadow: none;
+}

@@ -1,0 +1,91 @@
+<div class="page-container">
+  <div class="itinerary-container">
+    <h2>Itinerary</h2>
+    <div class="timeline-grid">
+<!--      &lt;!&ndash; Time column (labels on the left) &ndash;&gt;-->
+<!--      <div class="time-column">-->
+<!--        <div class="time-slot-header">-->
+<!--          <h6>-->
+<!--            Time-->
+<!--          </h6></div>-->
+<!--        <div class="time-slot" *ngFor="let time of timeSlots">-->
+<!--          {{ time }}-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; Day columns &ndash;&gt;-->
+<!--      <div-->
+<!--        class="day-column"-->
+<!--        *ngFor="let day of itineraryDays; let dayIndex = index"-->
+<!--      >-->
+
+<!--        <div class="day-header">-->
+<!--          <h6>{{ day.day }}</h6>-->
+<!--        </div>-->
+
+<!--        <div-->
+<!--          class="time-slot activity-time-slot"-->
+<!--          *ngFor="let time of timeSlots"-->
+<!--          cdkDropList-->
+<!--          [cdkDropListData]="asAttractionList([])"-->
+<!--          [cdkDropListConnectedTo]="['attractionsBank']"-->
+<!--          (cdkDropListDropped)="drop($event, dayIndex, time)"-->
+<!--          [id]="'drop-zone-' + dayIndex + '-' + time"-->
+<!--        >-->
+<!--          <div-->
+<!--            *ngIf="day.activities[time]"-->
+<!--            class="activity"-->
+<!--            cdkDrag-->
+<!--            [cdkDragData]="day.activities[time]"-->
+<!--          >-->
+<!--            {{ day.activities[time].name }}-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+    </div>
+    <div class="carousel-container">
+      <div class="time-column">
+        <div class="time-slot" *ngFor="let time of timeSlots">
+          {{ time }}
+        </div>
+      </div>
+      <owl-carousel-o class="itinerary-carousel"
+        [options]="carouselOptions">
+
+
+        <ng-template carouselSlide class="carousel-slide" *ngFor="let day of itineraryDays; let dayIndex = index">
+          <div class="carousel-day-column">
+            <div class="day-header day-header-{{dayIndex}}">
+              <h6>{{ day.day }}</h6>
+            </div>
+
+            <div
+              class="time-slot activity-time-slot"
+              *ngFor="let time of timeSlots"
+              cdkDropList
+              [cdkDropListData]="asAttractionList([])"
+              [cdkDropListConnectedTo]="['attractionsBank']"
+              (cdkDropListDropped)="drop($event, dayIndex, time)"
+              [id]="'drop-zone-' + dayIndex + '-' + time"
+            >
+              <div
+                *ngIf="day.activities[time]"
+                class="activity activity-{{day.activities[time].category}} activity-{{dayIndex}}"
+                cdkDrag
+                [cdkDragData]="day.activities[time]"
+              >
+                {{ day.activities[time].name }}
+              </div>
+            </div>
+          </div>
+
+        </ng-template>
+
+      </owl-carousel-o>
+    </div>
+
+  </div>
+  <div class="attractions-bank-container">
+    <attractions-bank [itineraryDays]="itineraryDays" [timeSlots]="timeSlots"></attractions-bank>
+  </div>
+</div>

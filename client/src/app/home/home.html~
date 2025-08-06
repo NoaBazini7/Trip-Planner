@@ -1,0 +1,9 @@
+<div class="home-container">
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>Plan trips.</h1>
+      <h1>Travel the world.</h1>
+      <button mat-button [routerLink]="['/planning-wizard']">Start Planning ></button>
+    </div>
+  </div>
+</div>

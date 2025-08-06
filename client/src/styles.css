@@ -1,0 +1,75 @@
+/* === Design Tokens === */
+:root {
+  --font-title: 'Raleway', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  --color-primary: #4a5759;
+  --color-bg: #eae7df;
+  --color-surface: #edede9; ;
+  --color-text: #dad7cd;
+  --color-accent: #d6ccc2;
+
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 1rem;      /* 16px */
+  --radius-xl: 1.5rem;    /* 24px */
+
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 2rem;       /* 32px */
+
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem;   /* 16px */
+  --font-size-lg: 1.25rem;  /* 20px */
+  --font-size-title: 3rem; /* 48px */
+
+  --button-size-sm: 1.5rem; /* 24px */
+  --button-size-md: 2rem;   /* 32px */
+  --button-size-lg: 2.5rem; /* 40px */
+}
+
+/* === Global Resets === */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-title);
+  background-color: var(--color-bg);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* === Typography Utility === */
+h1, h2, h3 {
+  color: var(--color-bg);
+  margin: 0;
+}
+p {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+/* === Scrollbar Styling === */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+.mat-toolbar {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+

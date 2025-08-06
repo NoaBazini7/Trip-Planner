@@ -1,0 +1,57 @@
+.clock {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #fbf7f7;
+  position: relative;
+  border: 3px solid black;
+  margin: auto;
+}
+
+.hour-number {
+  position: absolute;
+  left: 58px;
+  top: 52px;
+  color: #cb7287;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.minutes-dash {
+  position: absolute;
+  width: 2px;
+  height: 8px; /* Length of the dash */
+  background-color: #cb7287;
+  top: 55px;
+  left: 62px;
+  transform-origin: center bottom;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.hour-number:hover,
+.minutes-dash:hover {
+  color: #b53a57;
+}
+
+.hand {
+  position: absolute;
+  width: 3px;
+  height: 30px;
+  background-color: #cb7287;
+  top: 33px;
+  left: 61px;
+  transform-origin: bottom center;
+}
+.hour-hand {
+  z-index: 2;
+}
+
+.minute-hand {
+  width: 3px !important;
+  height: 43px;
+  background-color: #aec88a;
+  top: 21px;
+  z-index: 1;
+}

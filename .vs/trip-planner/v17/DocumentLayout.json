@@ -1,0 +1,271 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Noab\\Desktop\\trip-planner\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\services\\aiattractionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\services\\aiattractionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\controllers\\aiattractioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\controllers\\aiattractioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\services\\attactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\services\\attactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\models\\attraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\models\\attraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\models\\dtos\\attractionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\models\\dtos\\attractionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\models\\dtos\\attractionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\models\\dtos\\attractionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\models\\dtos\\aiattractiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\models\\dtos\\aiattractiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\models\\dtos\\cityrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\models\\dtos\\cityrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\data\\tripplannerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\data\\tripplannerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\models\\dtos\\cityresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\models\\dtos\\cityresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\services\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\services\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\models\\dtos\\countryrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\models\\dtos\\countryrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|c:\\users\\noab\\desktop\\trip-planner\\server\\tripplanner.api\\models\\dtos\\generateattractionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E95472D-9956-1483-8574-86D08A617CDE}|server\\TripPlanner.API\\TripPlanner.API.csproj|solutionrelative:server\\tripplanner.api\\models\\dtos\\generateattractionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 269,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AiAttractionService.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Services\\AiAttractionService.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Services\\AiAttractionService.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Services\\AiAttractionService.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Services\\AiAttractionService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAADwv6EAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T09:05:41.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AttractionRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\AttractionRequestDto.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Models\\DTOs\\AttractionRequestDto.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\AttractionRequestDto.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Models\\DTOs\\AttractionRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T15:36:58.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AiAttractionDto.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\AiAttractionDto.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Models\\DTOs\\AiAttractionDto.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\AiAttractionDto.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Models\\DTOs\\AiAttractionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T11:53:52.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Attraction.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\Attraction.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Models\\Attraction.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\Attraction.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Models\\Attraction.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA4wCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T15:36:34.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "City.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\City.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Models\\City.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\City.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Models\\City.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T17:56:25.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AttactionService.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Services\\AttactionService.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Services\\AttactionService.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Services\\AttactionService.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Services\\AttactionService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T18:08:50.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AiAttractionController.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Controllers\\AiAttractionController.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Controllers\\AiAttractionController.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Controllers\\AiAttractionController.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Controllers\\AiAttractionController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAIAwwB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T11:37:46.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AttractionResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\AttractionResponseDto.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Models\\DTOs\\AttractionResponseDto.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\AttractionResponseDto.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Models\\DTOs\\AttractionResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T11:52:37.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CityRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\CityRequestDto.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Models\\DTOs\\CityRequestDto.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\CityRequestDto.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Models\\DTOs\\CityRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T18:06:56.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TripPlannerDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Data\\TripPlannerDbContext.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Data\\TripPlannerDbContext.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Data\\TripPlannerDbContext.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Data\\TripPlannerDbContext.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T16:40:33.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CityResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\CityResponseDto.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Models\\DTOs\\CityResponseDto.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\CityResponseDto.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Models\\DTOs\\CityResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T15:37:14.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CityService.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Services\\CityService.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Services\\CityService.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Services\\CityService.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Services\\CityService.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T17:59:18.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Program.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Program.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T17:22:14.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CountryRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\CountryRequestDto.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Models\\DTOs\\CountryRequestDto.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\CountryRequestDto.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Models\\DTOs\\CountryRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T15:37:17.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GenerateAttractionRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\GenerateAttractionRequestDto.cs",
+              "RelativeDocumentMoniker": "server\\TripPlanner.API\\Models\\DTOs\\GenerateAttractionRequestDto.cs",
+              "ToolTip": "C:\\Users\\Noab\\Desktop\\trip-planner\\server\\TripPlanner.API\\Models\\DTOs\\GenerateAttractionRequestDto.cs",
+              "RelativeToolTip": "server\\TripPlanner.API\\Models\\DTOs\\GenerateAttractionRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T15:36:54.108Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 119,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

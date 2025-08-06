@@ -1,0 +1,20 @@
+<mat-toolbar class="app-header">
+  <div class="app-header-left">
+    <img src="assets/logo.svg" alt="logo" class="brand-logo" />
+  </div>
+  
+  <nav class="app-header-button-group">
+    <button mat-button [routerLink]="['/']">Home</button>
+    <button mat-button>Explore</button>
+    <button mat-button>Trips</button>
+    <button mat-button>Settings</button>
+  </nav>
+
+  <button mat-icon-button aria-label="Account" class="user-icon" [matMenuTriggerFor]="userMenu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item>Profile</button>
+    <button mat-menu-item>Logout</button>
+  </mat-menu>
+</mat-toolbar>

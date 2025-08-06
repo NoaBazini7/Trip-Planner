@@ -1,0 +1,25 @@
+<div
+  class="clock"
+  
+>
+  <!-- Hour numbers -->
+  <div
+    *ngFor="let h of hours"
+    class="hour-number"
+    [style.transform]="getHourNumberPosition(h)"
+    (click)="onHourClick(h)"
+  >
+    {{ h === 0 ? 12 : h }} 
+  </div>
+
+   <div *ngFor="let i of [].constructor(12); let idx = index"
+       class="minutes-dash"
+       [ngStyle]="{'transform': 'rotate(' + (idx * 30 + 15) + 'deg) translateY(-54px)'}"
+       (click)="onMinClick(idx)">
+  </div>
+
+
+  <!-- Hands -->
+  <div class="hand hour-hand" [style.transform]="hourRotation"></div>
+  <div class="hand minute-hand" [style.transform]="minuteRotation"></div>
+</div>

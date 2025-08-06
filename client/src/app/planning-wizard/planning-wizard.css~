@@ -1,0 +1,317 @@
+.background-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('/assets/images/home-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wizard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  width: 80%;
+  max-width: 800px;
+  padding: var(--space-md);
+  background-color: var(--color-bg);
+}
+
+
+
+
+
+
+
+
+/*.wizard-step-when,*/
+/*.wizard-step-where,*/
+/*.wizard-step-how {*/
+/*  max-width: 1000px;*/
+/*  width: 80%;*/
+/*  margin: 0 auto;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+
+/*.when-content-card,*/
+/*.where-content-card,*/
+/*.how-content-card {*/
+/*  border-radius: 0px;*/
+/*  border-width: 0px 2px 2px 2px;*/
+/*  border-color: black;*/
+/*}*/
+
+/*.when-content {*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  justify-content: center;*/
+/*  align-items: stretch;*/
+/*  padding: 30px 40px;*/
+/*}*/
+
+/*.mat-calendar {*/
+/*  width: 100%;*/
+/*  max-width: 300px;*/
+/*  background-color: #aec88a;*/
+/*  border-radius: 10px;*/
+/*  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+/*  font-family: "Raleway", sans-serif;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  justify-content: center;*/
+/*}*/
+
+/*.arrival,*/
+/*.leave {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  width: 100%;*/
+/*  max-width: 250px;*/
+/*  background-color: #9ab473;*/
+/*  max-height: 100%;*/
+/*  margin-top: 20px;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+/*.arrival {*/
+/*  border-top-left-radius: 10px;*/
+/*  border-bottom-left-radius: 10px;*/
+/*}*/
+
+/*.leave {*/
+/*  border-top-right-radius: 10px;*/
+/*  border-bottom-right-radius: 10px;*/
+/*}*/
+
+/*.arrival-input,*/
+/*.leave-input {*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  width: 50%;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  background-color: #fdf1f2;*/
+/*  border-radius: 10px;*/
+/*  border-width: 2px;*/
+/*  border-color: black;*/
+/*  border-style: solid;*/
+/*  height: 40px;*/
+/*  gap: 5px;*/
+/*  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+/*  margin: 10px 0;*/
+/*}*/
+
+/*.time-seperator,*/
+/*.arrival-hour,*/
+/*.arrival-minute,*/
+/*.leave-hour,*/
+/*.leave-minute {*/
+/*  font-weight: bold;*/
+/*  font-size: clamp(10px, 2.5vw, 24px);*/
+/*  position: relative;*/
+/*  font-family: "Raleway", sans-serif;*/
+/*  color: #b53a57;*/
+/*  margin: 0;*/
+/*}*/
+
+/*.clock {*/
+/*  transform: translateZ(0);*/
+/*  backface-visibility: hidden;*/
+/*}*/
+
+/*.arrival-text,*/
+/*.leave-text {*/
+/*  font-size: 20px;*/
+/*  font-weight: bold;*/
+/*  color: #fdf1f2;*/
+/*  margin-top: 10px;*/
+/*  font-family: "Raleway", sans-serif;*/
+/*}*/
+
+/*.when-title-container,*/
+/*.where-title-container,*/
+/*.how-title-container {*/
+/*  border-radius: 0px;*/
+/*  justify-content: center;*/
+/*  background-color: #cb7287;*/
+/*  border-width: 2px;*/
+/*  border-color: black;*/
+/*  padding-left: 10px;*/
+/*  height: 30px;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.when-title,*/
+/*.where-title,*/
+/*.how-title {*/
+/*  font-size: 15px;*/
+/*  font-family: "Raleway", sans-serif;*/
+/*  font-weight: bold;*/
+/*  width: 100%;*/
+/*  margin: 0;*/
+/*}*/
+
+/*.wizard-header {*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  padding: 10px;*/
+/*}*/
+
+/*.where-content {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  gap: 20px;*/
+/*  padding: 30px 0px;*/
+/*}*/
+
+/*.country-selection-container,*/
+/*.city-selection-container {*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  width: 90%;*/
+/*}*/
+
+/*.country-selection-container {*/
+/*  align-self: first baseline;*/
+/*}*/
+
+/*.city-selection-container {*/
+/*  align-self: last baseline;*/
+/*}*/
+
+/*.country-selection-background,*/
+/*.city-selection-background {*/
+/*  background-color: #aec88a;*/
+/*  width: 100%;*/
+/*  margin: 0 auto;*/
+/*}*/
+
+/*.country-selection-background {*/
+/*  border-radius: 0px 10px 10px 0px;*/
+/*}*/
+
+/*.city-selection-background {*/
+/*  border-radius: 10px 0px 0px 10px;*/
+/*}*/
+
+/*.country-selection,*/
+/*.city-selection {*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  align-items: center;*/
+/*  gap: 90px;*/
+/*  padding: 20px 50px;*/
+/*  background-color: #aec88a;*/
+/*  width: 90%;*/
+/*  box-shadow: none;*/
+/*}*/
+
+/*.country-selection {*/
+/*  align-self: last baseline;*/
+/*}*/
+
+/*.country-selection-header,*/
+/*.city-selection-header {*/
+/*  color: #fdf1f2;*/
+/*  font-size: 20px;*/
+/*}*/
+
+/*.country-list,*/
+/*.city-list {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  width: 50%;*/
+/*  max-height: 400px;*/
+/*}*/
+
+/*.country-buttons-container,*/
+/*.city-buttons-container {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  gap: 10px;*/
+/*  width: 100%;*/
+/*  max-height: 400px;*/
+/*  max-width: 300px;*/
+/*  overflow-y: auto;*/
+/*  direction: rtl;*/
+/*  padding: 10px;*/
+/*}*/
+
+/*.country-list-button,*/
+/*.city-list-button {*/
+/*  background-color: #fdf1f2;*/
+/*  color: #cb7287;*/
+/*  border: none;*/
+/*  padding: 10px 20px;*/
+/*  font-size: 12px;*/
+/*  border-radius: 5px;*/
+/*  font-family: "Raleway", sans-serif;*/
+/*  font-weight: bold;*/
+/*  cursor: pointer;*/
+/*  transition: background-color 0.3s ease;*/
+/*  width: 100%;*/
+/*}*/
+
+/*.country-list-button.selected,*/
+/*.city-list-button.selected {*/
+/*  background-color: #bb6075;*/
+/*  color: #fdf1f2;*/
+/*}*/
+
+/*.country-list-button:hover,*/
+/*.city-list-button:hover {*/
+/*  background-color: #cb7287;*/
+/*  color: #fdf1f2;*/
+/*}*/
+
+/*.country-image,*/
+/*.city-image {*/
+/*  max-width: 100%;*/
+/*  object-fit: cover;*/
+/*  border-width: 2px;*/
+/*  border-style: solid;*/
+/*}*/
+
+/*.country-preview,*/
+/*.city-preview {*/
+/*  width: 50%;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*}*/
+
+/*.how-content {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  padding: 30px 0px;*/
+/*}*/
+
+/*.day-start-end-slider {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  width: 50%;*/
+/*}*/
+
+/*.day-start-end-labels {*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  justify-content: space-between;*/
+/*  width: 100%;*/
+/*  margin-top: 10px;*/
+/*}*/
