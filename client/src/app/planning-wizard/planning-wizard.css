@@ -13,20 +13,90 @@
 
 .wizard-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   position: absolute;
-  top: 10%;
+  top: var(--space-xxxl);
   width: 80%;
   max-width: 800px;
-  padding: var(--space-md);
-  background-color: var(--color-bg);
+  height: var(--button-size-xxl);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xxl);
+  padding: var(--space-sm) var(--space-md);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(74, 87, 89, 0.6) ;
 }
 
+.wizard-button {
+  text-align: left;
+  font-family: var(--font-body);
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: var(--font-size-xs);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-xl);
+  width: 20%;
+  min-width: 80px;
+  height: 100%;
+  transition: background-color 0.3s ease;
+  padding-top: var(--space-xs);
+  padding-left: var(--space-xs);
+}
+.wizard-button:hover, .wizard-go-button:hover {
+  background-color: rgba(74, 87, 89, 0.2);
+}
 
+.wizard-button p {
+  margin: 0;
+  font-weight: normal;
+  color: var(--color-primary);
+  opacity: 0.8;
+  font-size: var(--font-size-xs);
+}
 
+.wizard-go-button {
+  background-color: rgba(74, 87, 89, 0.1);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 3em;
+  border-radius: var(--radius-xl);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+}
 
+.vertical{
+  width: 1px;
+  background-color: var(--color-primary);
+  opacity: 0.5;
+  height: 32px;
+  margin: 0 var(--space-md);
+}
 
+/*@media only screen and (max-width: 600px) {*/
+/*  .wizard-container {*/
+/*    flex-direction: column;*/
+/*    width: 90%;*/
+/*    top: var(--space-lg);*/
+/*    gap: var(--space-sm);*/
+/*  }*/
+
+/*  .wizard-container button {*/
+/*    width: 100%;*/
+/*  }*/
+
+/*  .vertical {*/
+/*    display: none;*/
+/*  }*/
+/*}*/
 
 
 

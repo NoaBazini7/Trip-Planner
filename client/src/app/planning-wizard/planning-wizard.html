@@ -1,8 +1,27 @@
 <div class ="background-image">
   <div class="wizard-container">
-    <button mat-button class="where-button">
-      <p>Where?</p>
-    </button>
+    <div class="wizard-button">
+      Where?
+      <p class="wizard-button-subtitle">Choose destination</p>
+    </div>
+    <div class="vertical"></div>
+    <div class="wizard-button">
+      When?
+      <p class="wizard-button-subtitle">Add time</p>
+    </div>
+    <div class="vertical"></div>
+    <div  class="wizard-button">
+      Est. Arrival Time
+      <p class="wizard-button-subtitle">Add time</p>
+    </div>
+    <div class="vertical"></div>
+    <div class="wizard-button">
+      Est. Leave Time
+      <p class="wizard-button-subtitle">Add time</p>
+    </div>
+    <div class="wizard-go-button">
+      >
+    </div>
 
     <div class="wizard-step-when" ng-class="{active: currentStep === 1}">
       <!--    <mat-card class="when-title-container">-->

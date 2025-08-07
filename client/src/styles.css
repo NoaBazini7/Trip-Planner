@@ -13,12 +13,17 @@
   --radius-md: 0.5rem;    /* 8px */
   --radius-lg: 1rem;      /* 16px */
   --radius-xl: 1.5rem;    /* 24px */
+  --radius-xxl: 2rem;     /* 32px */
 
   --space-xs: 0.25rem;    /* 4px */
   --space-sm: 0.5rem;     /* 8px */
   --space-md: 1rem;       /* 16px */
   --space-lg: 2rem;       /* 32px */
+  --space-xl: 3rem;       /* 48px */
+  --space-xxl: 4.5rem;    /* 72px */
+  --space-xxxl: 6rem;     /* 96px */
 
+  --font-size-xs: 0.75rem; /* 12px */
   --font-size-sm: 0.875rem; /* 14px */
   --font-size-base: 1rem;   /* 16px */
   --font-size-lg: 1.25rem;  /* 20px */
@@ -27,6 +32,8 @@
   --button-size-sm: 1.5rem; /* 24px */
   --button-size-md: 2rem;   /* 32px */
   --button-size-lg: 2.5rem; /* 40px */
+  --button-size-xl: 3rem;   /* 48px */
+  --button-size-xxl: 4rem; /* 64px */
 }
 
 /* === Global Resets === */
