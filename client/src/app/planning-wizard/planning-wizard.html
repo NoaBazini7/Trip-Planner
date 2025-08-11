@@ -1,25 +1,61 @@
 <div class ="background-image">
   <div class="wizard-container">
-    <div class="wizard-button">
+    <div class="wizard-button" [matMenuTriggerFor]="countryMenu">
       Where?
-      <p class="wizard-button-subtitle">Choose destination</p>
+      <input type="search" placeholder="{{selectedCity? selectedCity.name+', ' + selectedCountry?.name : 'Choose a destination'}}" class="wizard-button-where-input"/>
     </div>
+    <mat-menu class= "country-menu" #countryMenu="matMenu">
+      <ng-container *ngFor="let country of countries">
+        <button
+          mat-menu-item
+          [matMenuTriggerFor]="cityMenu"
+          #trigger="matMenuTrigger"
+          (mouseenter)="trigger.openMenu(); hoveredCountry = country">
+          {{ country.name }}
+        </button>
+      </ng-container>
+    </mat-menu>
+    <mat-menu class= "city-menu" #cityMenu="matMenu">
+      <ng-container *ngIf="hoveredCountry">
+        <button
+          mat-menu-item
+          *ngFor="let city of hoveredCountry.cities"
+          (click)="onCitySelect(city)">
+          {{ city.name }}
+        </button>
+      </ng-container>
+    </mat-menu>
     <div class="vertical"></div>
-    <div class="wizard-button">
+    <div class="wizard-button" [matMenuTriggerFor]="whenMenu">
       When?
-      <p class="wizard-button-subtitle">Add time</p>
+      <input type="search" placeholder="{{selectedRangeValue ? selectedRangeValue.start?.getDate()  : 'Select a date range'}}" class="wizard-button-when-input"/>
     </div>
+    <mat-menu class="when-menu" #whenMenu="matMenu">
+      <div (click)="$event.stopPropagation()" class="calendar-container">
+        <mat-calendar
+          [selected]="selectedRangeValue"
+          (selectedChange)="selectedChange($event)">
+        </mat-calendar>
+      </div>
+    </mat-menu>
     <div class="vertical"></div>
-    <div  class="wizard-button">
+    <div  class="wizard-button" [matMenuTriggerFor]="arrivalMenu">
       Est. Arrival Time
-      <p class="wizard-button-subtitle">Add time</p>
+      <input type="search" placeholder="{{arrivalHour? arrivalHour + ':' + arrivalMinute : 'Add time'}}" class="wizard-button-arrival-input"/>
     </div>
+    <mat-menu class="arrival-menu" #arrivalMenu="matMenu">
+      <button mat-menu-item (click)="onTimeSelected('arrival')">9:00 AM</button>
+      <button mat-menu-item (click)="onTimeSelected('arrival')">10:30 AM</button>
+      <button mat-menu-item (click)="onTimeSelected('arrival')">12:00 PM</button>
+      <button mat-menu-item (click)="onTimeSelected('arrival')">2:00 PM</button>
+      <button mat-menu-item (click)="onTimeSelected('arrival')">4:30 PM</button>
+    </mat-menu>
     <div class="vertical"></div>
     <div class="wizard-button">
       Est. Leave Time
       <p class="wizard-button-subtitle">Add time</p>
     </div>
-    <div class="wizard-go-button">
+    <div class="wizard-go-button" (click)="onClickNext()">
       >
     </div>
 
@@ -204,5 +240,8 @@
 
     </div>
   </div>
+
+
+
 
 </div>

@@ -34,18 +34,25 @@
   --button-size-lg: 2.5rem; /* 40px */
   --button-size-xl: 3rem;   /* 48px */
   --button-size-xxl: 4rem; /* 64px */
+  --button-size-xxxl: 6rem; /* 96px */
+  --button-size-xxxxl: 8rem; /* 128px */
+
+
+  --number-of-days: 7; /* Default fallback value */
 }
+
+
 
 /* === Global Resets === */
 html, body {
   height: 100%;
   margin: 0;
   font-family: var(--font-title);
-  background-color: var(--color-bg);
+  background-color: var(--color-surface);
 }
 
 body {
-  background-color: var(--color-bg);
+  background-color: var(--color-surface);
   color: var(--color-text);
 }
 
@@ -75,8 +82,93 @@ p {
   background: var(--color-accent);
 }
 
+
+.background-image {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0) 30%), url('/assets/images/home-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Angular Material Overrides === */
+
 .mat-toolbar {
   background-color: var(--color-primary);
   color: var(--color-text);
 }
+
+
+
+.country-menu, .city-menu, .arrival-menu {
+  background-color: var(--color-surface) !important;
+  color: var(--color-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 20rem;
+  direction: rtl;
+}
+
+.country-menu button, .city-menu button, .arrival-menu button {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  padding: var(--space-xs) var(--space-sm);
+  font-family: var(--font-body), serif;
+  border: none;
+  direction: ltr;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.when-menu {
+  background-color: var(--color-surface) !important;
+  color: var(--color-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 20rem;
+}
+
+.mat-mdc-menu-content {
+  padding: 0 !important;
+}
+
+.mat-calendar {
+  background-color: var(--color-surface) !important;
+  color: var(--color-primary) !important;
+  font-family: var(--font-body), serif !important;
+  overflow: hidden;
+  font-size: var(--font-size-sm) !important;
+}
+
+.mat-datepicker-content .mat-calendar {
+  height: auto !important;
+}
+
+.mat-calendar-body-in-range::before {
+  background-color: var(--color-primary) !important;
+}
+
+.mat-calendar-body-today {
+  border-width: 2px !important;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+  0 8px 10px 1px rgba(0, 0, 0, 0.14),
+  0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+  background-color: var(--color-text);
+}
+
+
+
 

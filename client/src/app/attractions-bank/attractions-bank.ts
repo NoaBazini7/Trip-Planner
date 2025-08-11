@@ -66,6 +66,7 @@ export class AttractionsBank {
     this.isDragging= false;
     const attraction = event.source.data;
     this.attractionDropped.emit(attraction);
+    console.log('Drag ended for:', attraction.name);
   }
 
   onDragStarted(event: CdkDragStart) {

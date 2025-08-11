@@ -1,17 +1,20 @@
-.attractions-bank-header {
-  margin-bottom: 40px;
-  margin-top : 20px;
-  align-self: center;
+
+.attractions-bank-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  direction: rtl;
 }
 
 .attractions-bank-columns-container {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 30px;
+
 }
 
 .attractions-bank-columns {
@@ -19,7 +22,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   width: fit-content;
 }
 .attractions-bank-chips-container {
@@ -32,7 +34,7 @@
 }
 
 .attractions-bank-chip {
-  width: 120px;
+  width: var(--button-size-xxxxl);
   height: fit-content;
   z-index: 1;
   padding-top : 10px;
