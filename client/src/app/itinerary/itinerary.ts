@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {CdkDrag, CdkDragDrop, CdkDragEnd, CdkDragStart, CdkDropList, transferArrayItem} from '@angular/cdk/drag-drop';
-import {NgClass, NgForOf, NgIf} from '@angular/common';
+import {NgClass, NgForOf, NgIf, NgStyle} from '@angular/common';
 import {AiAttractionDto} from '../models/attraction-dto';
 import {AttractionsBank} from '../attractions-bank/attractions-bank';
 import {CarouselComponent, CarouselInnerComponent, CarouselItemComponent} from '@coreui/angular';
@@ -18,6 +18,7 @@ import {MatSort} from '@angular/material/sort';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatSidenav, MatSidenavContainer} from '@angular/material/sidenav';
 import {MatButton} from '@angular/material/button';
+import {AttractionChipSimple} from '../attraction-chip-simple/attraction-chip-simple';
 
 @Component({
   selector: 'app-itinerary',
@@ -47,12 +48,15 @@ import {MatButton} from '@angular/material/button';
     DragDropModule,
     MatSidenavContainer,
     MatSidenav,
-    MatButton
+    MatButton,
+    NgStyle,
+    AttractionChipSimple
   ],
   styleUrls: ['./itinerary.css']
 })
 export class ItineraryComponent {
   @Input() numberOfDays: number = 6;
+  previewStyle = {};
 
   timeSlots: string[] = [
     '08:00', '09:00', '10:00', '11:00', '12:00', '13:00',

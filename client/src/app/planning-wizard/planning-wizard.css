@@ -10,7 +10,7 @@
   width: 85%;
   max-width: 800px;
   height: var(--button-size-xxl);
-  background-color: var(--color-surface);
+  background-color: var(--color-lightest);
   border-radius: var(--radius-xxl);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(74, 87, 89, 0.6) ;
@@ -20,7 +20,7 @@
 .wizard-button {
   text-align: left;
   font-family: var(--font-body);
-  color: var(--color-primary);
+  color: var(--color-text);
   font-weight: 500;
   font-size: var(--font-size-xs);
   border: none;
@@ -43,7 +43,7 @@
 .wizard-button p {
   margin: 0;
   font-weight: normal;
-  color: var(--color-primary);
+  color: var(--color-text);
   opacity: 0.8;
   font-size: var(--font-size-xs);
 
@@ -51,7 +51,7 @@
 
 .wizard-go-button {
   background-color: rgba(74, 87, 89, 0.1);
-  color: var(--color-primary);
+  color: var(--color-text);
   font-size: var(--font-size-sm);
   text-align: center;
   display: flex;
@@ -68,7 +68,7 @@
 
 .vertical{
   width: 1px;
-  background-color: var(--color-primary);
+  background-color: var(--color-text);
   opacity: 0.5;
   height: 32px;
   margin: 0 var(--space-sm);
@@ -78,7 +78,7 @@ input {
   width: 100%;
   border: none;
   background-color: transparent;
-  color: var(--color-primary);
+  color: var(--color-text);
   font-size: var(--font-size-xs);
   font-family: var(--font-body);
   outline: none;

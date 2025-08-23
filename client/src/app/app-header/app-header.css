@@ -27,7 +27,7 @@
 
 .app-header-button-group button {
   background-color: transparent; /* Transparent buttons */
-  color: var(--color-surface); /* White text */
+  color: var(--color-lightest); /* White text */
   border: none;
   font-size: var(--font-size-base);
   font-family: var(--font-title);
@@ -37,12 +37,12 @@
 }
 
 .app-header-button-group button:hover {
-  background-color: var(--color-bg);
-  color: var(--color-primary); /* Dark font on hover */
+  background-color: var(--color-light);
+  color: var(--color-text); /* Dark font on hover */
 }
 
 .user-icon {
-  color: var(--color-surface)
+  color: var(--color-lightest)
 }
 
 

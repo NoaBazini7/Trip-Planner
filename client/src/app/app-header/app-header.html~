@@ -2,9 +2,7 @@
   <div class="app-header-left">
     <img src="assets/logo.svg" alt="logo" class="brand-logo" />
   </div>
-
-  <span class="spacer"></span>
-
+  
   <nav class="app-header-button-group">
     <button mat-button [routerLink]="['/']">Home</button>
     <button mat-button>Explore</button>

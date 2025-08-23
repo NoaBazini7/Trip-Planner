@@ -93,13 +93,14 @@ export class PlanningWizard  implements OnInit {
           return `${value}:00`;
           }
         };
-    eatingStyle: 'fast'| 'normal' | 'relaxed' = 'normal';
+
+      eatingStyle: 'fast'| 'normal' | 'relaxed' = 'normal';
 
     constructor(private countryService: CountryService, private http: HttpClient, private router: Router,   private attractionState: AttractionStateService) {
 
     }
 
-  ngOnInit(): void {
+    ngOnInit(): void {
       this.countryService.getCountries().subscribe({
         next: (res) => {this.countries = res;
           console.log('Countries fetched successfully', this.countries);
@@ -108,10 +109,13 @@ export class PlanningWizard  implements OnInit {
     });
 
   }
+
+
   onCitySelect(city: City): void {
     this.selectedCity = city;
     this.selectedCountry= this.hoveredCountry;
   }
+
   onTimeSelected(event: any): void {
 
 
@@ -119,6 +123,8 @@ export class PlanningWizard  implements OnInit {
       console.log(`Leave time selected: ${this.leaveHour}:${this.leaveMinute}`);
 
   }
+
+
   onClickNext() : void {
 
     var baseUrl = 'https://localhost:5001';

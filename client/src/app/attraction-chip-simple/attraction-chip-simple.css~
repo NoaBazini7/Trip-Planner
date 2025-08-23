@@ -1,28 +1,9 @@
-.attractions-bank-chip-simple {
-  width: 120px;
-  height: 60px;
-  z-index: 1;
-  background-color: #f0f0f5 !important;
+.attraction-info-simple{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-primary) !important;
 }
-
-.attractions-bank-chip-simple h6 {
-  font-size: 15px;
-  color: #cb7287;
-  text-align: center;
-  margin: 0;
-}
-
-.attraction-image-simple {
-  position: absolute;
-  bottom: 0;
-  left: 5px;
-  z-index: 1; /* ensure image is below text */
-  pointer-events: none; /* avoid hover/click interference */
-  transform-origin: bottom left; /* 👈 anchor the scaling */
-  height: 30px;
-  opacity: 0.5;
-
-}
-
-
-

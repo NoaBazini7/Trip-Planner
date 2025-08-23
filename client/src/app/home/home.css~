@@ -16,7 +16,7 @@
   position: absolute;
   top: 40%;
   left: 30%;
-  traansform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .hero-text h1 {

@@ -3,7 +3,7 @@ import {MatCardModule} from '@angular/material/card';
 import {RouterModule} from '@angular/router';
 import {AiAttractionDto} from '../models/attraction-dto';
 import {AttractionStateService} from '../services/attraction-state.service';
-import {NgClass, NgForOf, NgIf, NgOptimizedImage, NgStyle} from '@angular/common';
+import {NgClass, NgForOf, NgIf, NgStyle} from '@angular/common';
 import {MatButton} from '@angular/material/button';
 import {MatChip} from '@angular/material/chips';
 import {
@@ -19,7 +19,7 @@ import {AttractionChipSimple} from '../attraction-chip-simple/attraction-chip-si
 
 @Component({
   selector: 'attractions-bank',
-  imports: [MatCardModule, RouterModule, NgForOf, MatButton, MatChip, NgClass, CdkDrag, CdkDropList, NgIf, AttractionChipSimple, CdkDragPlaceholder, CdkDragPreview, NgStyle, NgOptimizedImage],
+  imports: [MatCardModule, RouterModule, NgForOf, MatButton, MatChip, NgClass, CdkDrag, CdkDropList, NgIf, AttractionChipSimple, CdkDragPlaceholder, CdkDragPreview, NgStyle],
   templateUrl: './attractions-bank.html',
   styleUrl: './attractions-bank.css'
 })

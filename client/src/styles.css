@@ -3,11 +3,11 @@
   --font-title: 'Raleway', sans-serif;
   --font-body: 'Roboto', sans-serif;
 
-  --color-primary: #4a5759;
-  --color-bg: #eae7df;
-  --color-surface: #edede9; ;
-  --color-text: #dad7cd;
-  --color-accent: #d6ccc2;
+  --color-text-dark: #1f2223;
+  --color-text: #4a5759;
+  --color-light: #f5f3f4;
+  --color-lightest: #f8f9fa; ;
+  --color-mid: #e9ecef;
 
   --radius-sm: 0.25rem;   /* 4px */
   --radius-md: 0.5rem;    /* 8px */
@@ -36,6 +36,7 @@
   --button-size-xxl: 4rem; /* 64px */
   --button-size-xxxl: 6rem; /* 96px */
   --button-size-xxxxl: 8rem; /* 128px */
+  --button-size-xxxxxl: 10rem; /* 160px */
 
 
   --number-of-days: 7; /* Default fallback value */
@@ -47,18 +48,18 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: var(--font-title);
-  background-color: var(--color-surface);
+  font-family: var(--font-body);
+  background-color: var(--color-lightest);
 }
 
 body {
-  background-color: var(--color-surface);
+  background-color: var(--color-lightest);
   color: var(--color-text);
 }
 
 /* === Typography Utility === */
 h1, h2, h3 {
-  color: var(--color-bg);
+  color: var(--color-text-dark);
   margin: 0;
 }
 p {
@@ -72,14 +73,14 @@ p {
 }
 ::-webkit-scrollbar-track {
   border-radius: var(--radius-md);
-  background: var(--color-surface);
+  background: var(--color-lightest);
 }
 ::-webkit-scrollbar-thumb {
   border-radius: var(--radius-md);
-  background: var(--color-primary);
+  background: var(--color-text);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent);
+  background: var(--color-light);
 }
 
 
@@ -99,23 +100,23 @@ p {
 /* === Angular Material Overrides === */
 
 .mat-toolbar {
-  background-color: var(--color-primary);
+  background-color: var(--color-text);
   color: var(--color-text);
 }
 
 
 
 .country-menu, .city-menu, .arrival-menu {
-  background-color: var(--color-surface) !important;
-  color: var(--color-primary);
+  background-color: var(--color-lightest) !important;
+  color: var(--color-text);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-height: 20rem;
   direction: rtl;
 }
 
 .country-menu button, .city-menu button, .arrival-menu button {
-  background-color: var(--color-surface);
-  color: var(--color-primary);
+  background-color: var(--color-lightest);
+  color: var(--color-text);
   font-size: var(--font-size-sm);
   padding: var(--space-xs) var(--space-sm);
   font-family: var(--font-body), serif;
@@ -126,8 +127,8 @@ p {
 }
 
 .when-menu {
-  background-color: var(--color-surface) !important;
-  color: var(--color-primary);
+  background-color: var(--color-lightest) !important;
+  color: var(--color-text);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-height: 20rem;
 }
@@ -137,8 +138,8 @@ p {
 }
 
 .mat-calendar {
-  background-color: var(--color-surface) !important;
-  color: var(--color-primary) !important;
+  background-color: var(--color-lightest) !important;
+  color: var(--color-text) !important;
   font-family: var(--font-body), serif !important;
   overflow: hidden;
   font-size: var(--font-size-sm) !important;
@@ -149,26 +150,39 @@ p {
 }
 
 .mat-calendar-body-in-range::before {
-  background-color: var(--color-primary) !important;
+  background-color: var(--color-text) !important;
 }
 
 .mat-calendar-body-today {
   border-width: 2px !important;
 }
 
-.cdk-drag-preview {
-  box-sizing: border-box;
-  border-radius: 4px;
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-  0 8px 10px 1px rgba(0, 0, 0, 0.14),
-  0 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+.mat-drawer {
+  border:none !important;
 }
 
-.cdk-drag-placeholder {
-  opacity: 0;
-  background-color: var(--color-text);
+.mat-drawer-content {
+  width: var(--button-size-lg) !important;
+}
+
+.mdc-button {
+  min-width: 0 !important;
 }
 
 
-
-
+.drag-preview-chip {
+  height: var(--button-size-xxl);
+  width: var(--button-size-xxxl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  font-family: var(--font-body), serif;
+  font-size: var(--font-size-sm);
+  text-align: center;
+  background-color: var(--color-lightest);
+  border: 2px solid var(--color-text);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
