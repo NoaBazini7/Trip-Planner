@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import {
   Geist,
   Geist_Mono,
@@ -43,9 +44,12 @@ export default function RootLayout({
             }
           />
           <nav className="flex text-lg text-zinc-100">
-            <button className="px-3 py-1 hover:bg-zinc-50 hover:text-zinc-600 hover:cursor-pointer">
-              Home
-            </button>
+            <Link href={'/'}>
+              <button className="px-3 py-1 hover:bg-zinc-50 hover:text-zinc-600 hover:cursor-pointer">
+                Home
+              </button>
+            </Link>
+
             <button className="px-3 py-1 hover:bg-zinc-50 hover:text-zinc-600 hover:cursor-pointer">
               Explore
             </button>

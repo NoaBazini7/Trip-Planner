@@ -28,3 +28,10 @@ body {
   color: var(--foreground);
   font-family: var(--font-roboto);
 }
+
+.rdrDefinedRangesWrapper {
+  display: none;
+}
+.rdrDateDisplayWrapper {
+  display: none;
+}
