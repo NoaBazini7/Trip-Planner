@@ -4,10 +4,12 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
 using TripPlanner.API.Data;
 using TripPlanner.API.Models;
 using TripPlanner.API.Models.DTOs;
 using static System.Net.Mime.MediaTypeNames;
+
 
 
 public class AiAttractionService
@@ -44,7 +46,7 @@ public class AiAttractionService
 
         // ✉️ Step 3: Build prompt
         var prompt = $"""
-        Give me a JSON array of exactly 12 of the most popular must-see tourist locations & attractions (must include some notable streets or areas) in {cityName}, {countryName}.
+        Give me a JSON array of exactly 10 of the most popular must-see tourist locations & attractions (must include some notable streets or areas) in {cityName}, {countryName}.
         Each object in the array must include the following fields with realistic values:
 
         - Name (string): official place name 
@@ -55,27 +57,33 @@ public class AiAttractionService
         - Longitude (float)
         - Popularity (integer): from 1 (low) to 5 (very popular)
         - OpeningHours (string): full daily hours, formatted like:
-          "Su: 10:00-18:00, M: 09:00-17:00, Tu: 09:00-17:00, W: 09:00-17:00, Th: 09:00-17:00, F: 09:00-15:00, Sa: 10:00-14:00"
+          "Su: 10:00-18:00, M: 09:00-17:00, Tu: 09:00-17:00, W: 09:00-17:00, Th: 09:00-17:00, F: 09:00-15:00, Sa: 10:00-14:00" or "Open 24/7"
 
-        Output: compact JSON array ONLY with **exactly 12** objects. No text. No explanation.
+        Output: compact JSON array ONLY with **exactly 10** objects. No text. No explanation.
         """;
+
 
         // 🔧 Step 4: Prepare request
         var requestBody = new
         {
-            model = "command",
-            prompt = prompt,
-            max_tokens = 1600,
-            temperature = 0.7
+            model = "command-a-03-2025",
+            messages = new[]
+            {
+                new { role = "user", content = prompt }
+            },
+            temperature = 0.7,
+            max_tokens = 2200,
         };
 
         var jsonBody = JsonSerializer.Serialize(requestBody);
         var content = new StringContent(jsonBody, Encoding.UTF8, "application/json");
 
         _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
+        _httpClient.DefaultRequestHeaders.Add("Cohere-Version", "2024-10-01");
+
 
         // 🚀 Step 5: Send request
-        var response = await _httpClient.PostAsync("https://api.cohere.ai/v1/generate", content);
+        var response = await _httpClient.PostAsync("https://api.cohere.com/v2/chat", content);
 
 
 
@@ -121,7 +129,7 @@ public class AiAttractionService
             throw new Exception($"Cohere API error: {responseContent}");
 
         using var doc = JsonDocument.Parse(responseContent);
-        string? aiText = doc.RootElement.GetProperty("generations")[0].GetProperty("text").GetString();
+        string? aiText = doc.RootElement.GetProperty("message").GetProperty("content")[0].GetProperty("text").GetString();
 
         if (string.IsNullOrWhiteSpace(aiText))
             throw new Exception("AI response text is empty 😩");

@@ -9,7 +9,10 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import { DateRangePicker } from 'react-date-range';
+import {
+  DateRange,
+  DateRangePicker,
+} from 'react-date-range';
 import { RangeKeyDict } from 'react-date-range';
 import {
   LocalizationProvider,
@@ -161,10 +164,41 @@ export default function Plan() {
     setCities(data);
   };
 
-  const onSearch = () => {
+  const fetchAttractions = async (
+    cityId: number
+  ) => {
+    const response = await fetch(
+      `https://localhost:5001/api/aiattraction/generate`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type':
+            'application/json',
+        },
+        body: JSON.stringify({
+          cityId: cityId,
+        }),
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+    return data;
+  };
+
+  const onSearch = async () => {
     console.log('Search clicked');
+    if (!selectedCity) {
+      alert(
+        'Please select a destination'
+      );
+      return;
+    }
+    const attractions =
+      await fetchAttractions(
+        selectedCity.id
+      );
     router.push(
-      `/itinerary?destination=${encodeURIComponent(selectedCity ? selectedCity?.name : ' ')}&days=5`
+      `/itinerary?destination=${encodeURIComponent(selectedCity ? selectedCity?.name : ' ')}&range=${encodeURIComponent(JSON.stringify(dateRange))}&attractions=${encodeURIComponent(JSON.stringify(attractions))}`
     );
   };
   return (
