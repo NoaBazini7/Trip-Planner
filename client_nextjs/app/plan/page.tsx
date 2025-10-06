@@ -185,6 +185,11 @@ export default function Plan() {
     return data;
   };
 
+  //search
+
+  const [isSearching, setIsSearching] =
+    useState(false);
+
   const onSearch = async () => {
     console.log('Search clicked');
     if (!selectedCity) {
@@ -193,6 +198,7 @@ export default function Plan() {
       );
       return;
     }
+    setIsSearching(true);
     const attractions =
       await fetchAttractions(
         selectedCity.id
@@ -408,9 +414,14 @@ export default function Plan() {
             </LocalizationProvider>
           </Menu>
           <button
-            className="flex justify-center items-center h-10 w-11 bg-zinc-300 
-                       mr-2  rounded-full hover:bg-zinc-400 hover:cursor-pointer"
+            className={`flex justify-center items-center h-10 w-11 mr-2 rounded-full 
+             ${
+               isSearching
+                 ? 'bg-zinc-500 cursor-not-allowed'
+                 : 'bg-zinc-300 hover:bg-zinc-400 hover:cursor-pointer'
+             }`}
             onClick={onSearch}
+            disabled={isSearching}
           >
             {'>'}
           </button>

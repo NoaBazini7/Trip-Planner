@@ -39,6 +39,7 @@ namespace TripPlanner.API.Controllers
                 {
                     aiAttractions.Add(new AiAttractionDto
                     {
+
                         Name = c.Name,
                         Description = c.Description,
                         Category = c.Category,
@@ -52,7 +53,7 @@ namespace TripPlanner.API.Controllers
                 return Ok(aiAttractions);
 
             }
-                
+
 
 
 
