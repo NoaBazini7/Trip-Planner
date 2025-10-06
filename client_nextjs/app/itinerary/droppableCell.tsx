@@ -8,14 +8,13 @@ export default function DroppableCell({
   id: string;
   children?: React.ReactNode;
 }) {
-  const { isOver, setNodeRef } =
-    useDroppable({
-      id: id,
-    });
+  const { isOver, setNodeRef } = useDroppable({
+    id: id,
+  });
 
   return (
     <div
-      className="w-full h-full sm:text-xs  md:text-sm  lg:text-base border-2 border-dashed border-gray-500 flex flex-row items-center justify-center"
+      className="h-full w-full justify-center sm:text-xs  md:text-sm  lg:text-base bg-amber-800 flex flex-row items-center"
       ref={setNodeRef}
       style={{
         opacity: isOver ? 0.5 : 1,

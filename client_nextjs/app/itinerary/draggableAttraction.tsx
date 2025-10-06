@@ -13,7 +13,7 @@ export default function DraggableAttraction({
     });
   return (
     <button
-      className="rounded p-2 bg-gray-600 text-left h-full w-11/12 cursor-grab"
+      className="rounded p-2 px-5 hover:bg-zinc-500 text-left text-sm h-full w-full cursor-grab self-baseline"
       ref={setNodeRef}
       {...listeners}
       {...attributes}
