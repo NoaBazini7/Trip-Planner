@@ -103,18 +103,8 @@ export default function ItineraryPage() {
     }
   }
 
-  function removeFromCell(child: string, parent: string) {
-    return () => {
-      setCellMap(prev => {
-        const newMap = new Map(prev);
-        newMap.delete(parent);
-        return newMap;
-      });
-    };
-  }
-
   return (
-    <div className="relative flex justify-center h-full w-full overflow-hidden">
+    <div className="relative flex justify-center h-full w-full">
       <Image
         src={'/itinerary.jpg'}
         alt={'itinerary'}
@@ -122,16 +112,17 @@ export default function ItineraryPage() {
         height={1080}
         className={'object-cover'}
       />
-      <div className="absolute flex flex-col inset-0 bg-gradient-to-b from-black/40 via-black/5 to-black/0">
-        <div className="absolute text-white top-15 justify-center w-full text-center ">
+
+      <div className="absolute flex flex-col inset-0 bg-gradient-to-b from-black/40 via-black/5 to-black/0 pt-15">
+        <div className="relative text-white  justify-center w-full text-center mb-5">
           <h1 className="text-4xl font-semibold tracking-wider">
             {`${destination} ${dateRange.startDate ? new Date(dateRange.startDate).getFullYear() : ''}`}
           </h1>
         </div>
-        <div className="p-5 flex flex-row justify-between w-screen absolute text-white top-30 h-[80vh] bg-zinc-300/40">
+        <div className="flex flex-row justify-start w-full relative text-white h-[75vh]">
           <DndContext onDragEnd={handleDragEnd} onDragStart={handleDragStart}>
             <div
-              className="p-2 flex flex-col w-1/6 max-h-full overflow-auto overflow-x-hidden gap-2 bg-zinc-300/20"
+              className="p-2 flex flex-col max-h-full lg:w-1/4 md:w-1/3 sm:w-1/2 overflow-auto overflow-x-hidden gap-2 bg-zinc-300"
               dir="rtl"
             >
               <h2 dir="ltr" className="font-bold tracking-wider">
@@ -150,33 +141,50 @@ export default function ItineraryPage() {
                     {isScheduled && (
                       <div className="absolute text-green-500">V</div>
                     )}
-                    <DraggableAttraction attraction={attr} />
+                    <DraggableAttraction
+                      maxHeight={cellHeight}
+                      attraction={attr}
+                    />
                   </div>
                 );
               })}
+
               <h2 dir="ltr">Meals:</h2>
-              <DraggableAttraction
-                key={'Breakfast'}
-                attraction={{
-                  name: 'Breakfast',
-                }}
-              />
-              <DraggableAttraction
-                key={'Lunch'}
-                attraction={{
-                  name: 'Lunch',
-                }}
-              />
-              <DraggableAttraction
-                key={'Dinner'}
-                attraction={{
-                  name: 'Dinner',
-                }}
-              />
+              <div className="relative flex flex-row items-center" dir="ltr">
+                <DraggableAttraction
+                  key={'Breakfast'}
+                  attraction={{
+                    name: 'Breakfast',
+                    category: 'meal',
+                  }}
+                  maxHeight={cellHeight}
+                />
+              </div>
+
+              <div className="relative flex flex-row items-center" dir="ltr">
+                <DraggableAttraction
+                  key={'Lunch'}
+                  attraction={{
+                    name: 'Lunch',
+                    category: 'meal',
+                  }}
+                  maxHeight={cellHeight}
+                />
+              </div>
+              <div className="relative flex flex-row items-center" dir="ltr">
+                <DraggableAttraction
+                  key={'Dinner'}
+                  attraction={{
+                    name: 'Dinner',
+                    category: 'meal',
+                  }}
+                  maxHeight={cellHeight}
+                />
+              </div>
             </div>
-            <div className="flex flex-row gap-3 w-4/5 ml-5 mr-5">
+            <div className="flex flex-row gap-3 w-full ml-5 mr-5">
               <div
-                className=" flex flex-col justify-center"
+                className=" flex flex-col mt-5 justify-center"
                 style={{ gap: cellHeight - 16 }}
               >
                 {times.map(time => (
@@ -186,10 +194,10 @@ export default function ItineraryPage() {
                 ))}
               </div>
 
-              <div className="flex flex-row w-full h-full gap-1 bg-zinc-500 rounded-lg px-2 pb-2">
+              <div className="flex flex-row w-full h-full gap-1 bg-zinc-200 rounded-2xl border-1 border-zinc-500  text-zinc-600 inset-shadow-xs inset-shadow-zinc-400 px-2 pb-3">
                 {Array.from(new Array(numberOfDays)).map((_, dayIndex) => (
                   <div key={dayIndex} className="flex flex-col w-full h-full">
-                    <div className="text-center m-2 h-5 mb-3">
+                    <div className="text-center m-2 h-5 mb-3 lg:text-lg md:text-md sm:text-xs pointer-events-none">
                       {' '}
                       Day {dayIndex + 1}
                     </div>
@@ -251,10 +259,14 @@ export default function ItineraryPage() {
                 ))}
               </div>
             </div>
-            <DragOverlay>
+            <DragOverlay
+              style={{
+                transformOrigin: '50% 50%',
+              }}
+            >
               {activeAttraction ? (
                 <button
-                  className="rounded p-2 bg-gray-700 text-left h-full w-full"
+                  className="rounded p-2 bg-gray-700 text-left h-full w-full opacity-50 text-sm"
                   style={{
                     cursor: 'grabbing',
                   }}
@@ -264,6 +276,12 @@ export default function ItineraryPage() {
               ) : null}
             </DragOverlay>
           </DndContext>
+        </div>
+        <div className=" flex flex-col items-center bg-zinc-600 p-5 w-full">
+          <h2 className="text-2xl text-zinc-100 font-bold">Plan your trip</h2>
+          <p className="text-zinc-400">
+            Here you can plan your next adventure!
+          </p>
         </div>
       </div>
     </div>
