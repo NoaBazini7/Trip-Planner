@@ -144,7 +144,7 @@ export default function ItineraryPage() {
                         attraction={attr}
                         maxWidth={colWidth * 2}
                       >
-                        {isScheduled && <div className="text-green-500">V</div>}
+                        {isScheduled && <div className="text-green-500">✓</div>}
                       </DraggableAttraction>
                     </div>
                   );
@@ -186,7 +186,7 @@ export default function ItineraryPage() {
                   />
                 </div>
               </div>
-              <div className="flex flex-row gap-3 w-full ml-5 mr-5">
+              <div className="flex flex-row gap-3 w-full ml-5 mr-5 mb-5">
                 <div
                   className=" flex flex-col justify-center"
                   style={{ gap: cellHeight - 16 }}
@@ -205,10 +205,7 @@ export default function ItineraryPage() {
                         {' '}
                         Day {dayIndex + 1}
                       </div>
-                      <div
-                        className="flex flex-row  h-full w-full"
-                        ref={colRef}
-                      >
+                      <div className="flex flex-row h-full w-full" ref={colRef}>
                         <DroppableCell
                           id={`day-${dayIndex}-col`}
                           key={`day-${dayIndex}-col`}
@@ -255,6 +252,24 @@ export default function ItineraryPage() {
                                       }}
                                     >
                                       {attr ? attr.name : s.id}
+                                      <div
+                                        className="absolute top-0 right-0 text-red-500 font-bold pl-1 pr-1 cursor-pointer hover:opacity-70"
+                                        onClick={() => {
+                                          setSchedule(prev =>
+                                            prev.filter(
+                                              (item: ScheduledAttraction) =>
+                                                !(
+                                                  item.id === s.id &&
+                                                  item.day === s.day &&
+                                                  item.startTimeIndex ===
+                                                    s.startTimeIndex
+                                                )
+                                            )
+                                          );
+                                        }}
+                                      >
+                                        ×
+                                      </div>
                                     </div>
                                   );
                                 })}
@@ -276,7 +291,7 @@ export default function ItineraryPage() {
               >
                 {activeAttraction ? (
                   <button
-                    className="rounded p-2 bg-gray-700 text-left h-full w-full opacity-50 text-sm"
+                    className="rounded-4xl border-1 p-2 text-left h-full w-full opacity-50 text-xs"
                     style={{
                       cursor: 'grabbing',
                     }}
